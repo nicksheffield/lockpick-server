@@ -17,6 +17,7 @@ class CreateLoginsTable extends Migration
 			$table->increments('id');
 			$table->string('username');
 			$table->string('password')->nullable();
+			$table->string('notes')->nullable();
 			$table->integer('site_id');
 			$table->timestamps();
 			$table->softDeletes();

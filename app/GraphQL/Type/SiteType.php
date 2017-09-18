@@ -33,6 +33,10 @@ class SiteType extends GraphQLType {
 				'type' => Type::string(),
 				'description' => 'The url of the site'
 			],
+			'notes' => [
+				'type' => Type::string(),
+				'description' => 'The notes for this site'
+			],
 			'created_at' => [
 				'type' => Type::string(),
 				'description' => 'The date created'

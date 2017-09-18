@@ -19,7 +19,8 @@ class ClientChangeMutation extends Mutation {
 
 	public function args() {
 		return [
-			'name' => ['name' => 'name', 'type' => Type::nonNull(Type::string())],
+			'name'  => ['name' => 'name',  'type' => Type::nonNull(Type::string())],
+			'notes' => ['name' => 'notes', 'type' => Type::string()],
 		];
 	}
 

@@ -17,6 +17,7 @@ class CreateSitesTable extends Migration
 			$table->increments('id');
 			$table->string('name');
 			$table->string('url')->nullable();
+			$table->string('notes')->nullable();
 			$table->integer('client_id');
 			$table->timestamps();
 			$table->softDeletes();

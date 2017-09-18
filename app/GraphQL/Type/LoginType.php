@@ -33,6 +33,10 @@ class LoginType extends GraphQLType {
 				'type' => Type::string(),
 				'description' => 'The password'
 			],
+			'notes' => [
+				'type' => Type::string(),
+				'description' => 'The notes for this login'
+			],
 			'created_at' => [
 				'type' => Type::string(),
 				'description' => 'The date created'

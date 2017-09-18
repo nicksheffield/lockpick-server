@@ -21,6 +21,7 @@ class LoginChangeMutation extends Mutation {
 		return [
 			'username' => ['name' => 'username', 'type' => Type::nonNull(Type::string())],
 			'password' => ['name' => 'password', 'type' => Type::nonNull(Type::string())],
+			'notes'    => ['name' => 'notes',    'type' => Type::string()],
 			'site_id'  => ['name' => 'site_id',  'type' => Type::int()],
 		];
 	}

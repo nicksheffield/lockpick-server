@@ -21,6 +21,7 @@ class SiteAddMutation extends Mutation {
 		return [
 			'name'      => ['name' => 'name',      'type' => Type::nonNull(Type::string())],
 			'url'       => ['name' => 'url',       'type' => Type::string()],
+			'notes'     => ['name' => 'notes',     'type' => Type::string()],
 			'client_id' => ['name' => 'client_id', 'type' => Type::int()],
 		];
 	}

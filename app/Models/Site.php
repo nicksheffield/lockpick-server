@@ -12,7 +12,7 @@ class Site extends Model
 	protected $table = 'sites';
 	
 	protected $fillable = [
-		'name', 'url', 'client_id'
+		'name', 'url', 'client_id', 'notes'
 	];
 	
 	public function client() {

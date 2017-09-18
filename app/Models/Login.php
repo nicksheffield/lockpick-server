@@ -12,7 +12,7 @@ class Login extends Model
 	protected $table = 'logins';
 	
 	protected $fillable = [
-		'username', 'password', 'site_id'
+		'username', 'password', 'site_id', 'notes'
 	];
 	
 	public function site() {

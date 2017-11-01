@@ -27,7 +27,6 @@ class LoginQuery extends Query {
 			'sort'      => [ 'name' => 'sort',      'type' => Type::string()  ],
 			'dir'       => [ 'name' => 'dir',       'type' => Type::string()  ],
 			'trash'     => [ 'name' => 'trash',     'type' => Type::boolean() ],
-			'client_id' => [ 'name' => 'client_id', 'type' => Type::int()     ],
 			'site_id'   => [ 'name' => 'site_id',   'type' => Type::int()     ],
 		];
 	}
@@ -37,10 +36,6 @@ class LoginQuery extends Query {
 
 		if (isset($args['trash'])) {
 			$q = $q->withTrashed();
-		}
-
-		if (isset($args['client_id'])) {
-			$q = $q->where('client_id', $args['client_id']);
 		}
 
 		if (isset($args['site_id'])) {

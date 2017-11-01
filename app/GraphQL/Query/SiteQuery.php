@@ -21,12 +21,13 @@ class SiteQuery extends Query {
 
 	public function args() {
 		return [
-			'id'    => [ 'name' => 'id',    'type' => Type::int()     ],
-			'limit' => [ 'name' => 'limit', 'type' => Type::int()     ],
-			'page'  => [ 'name' => 'page',  'type' => Type::int()     ],
-			'sort'  => [ 'name' => 'sort',  'type' => Type::string()  ],
-			'dir'   => [ 'name' => 'dir',   'type' => Type::string()  ],
-			'trash' => [ 'name' => 'trash', 'type' => Type::boolean() ],
+			'id'        => [ 'name' => 'id',        'type' => Type::int()     ],
+			'limit'     => [ 'name' => 'limit',     'type' => Type::int()     ],
+			'page'      => [ 'name' => 'page',      'type' => Type::int()     ],
+			'sort'      => [ 'name' => 'sort',      'type' => Type::string()  ],
+			'dir'       => [ 'name' => 'dir',       'type' => Type::string()  ],
+			'trash'     => [ 'name' => 'trash',     'type' => Type::boolean() ],
+			'client_id' => [ 'name' => 'client_id', 'type' => Type::int()     ],
 		];
 	}
 
@@ -35,6 +36,10 @@ class SiteQuery extends Query {
 
 		if (isset($args['trash'])) {
 			$q = $q->withTrashed();
+		}
+
+		if (isset($args['client_id'])) {
+			$q = $q->where('client_id', $args['client_id']);
 		}
 
 		if(isset($args['id'])) {

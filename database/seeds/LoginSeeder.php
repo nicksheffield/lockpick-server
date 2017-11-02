@@ -31,7 +31,7 @@ class LoginSeeder extends Seeder
 
 				$logins[] = [
 					'username' => $faker->userName,
-					'password' => bcrypt($faker->password),
+					'password' => $faker->password,
 					'notes' => $realText,
 					'site_id' => $site->id
 				];
